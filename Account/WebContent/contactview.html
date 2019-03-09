@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	
+		
+		
+		
+		.btnContainer{margin:2px 0px 15px 0px;float:right;font-weight: bold;}
+
+.btnMain{margin-left:10px;float:left;cursor:pointer;}
+
+.btnMain li{float:left;list-style:none;}
+.btnL,.btnR{background:url(../images/btnL.png) no-repeat;height:35px;width:15px;}
+.btnC{background:url(../images/btnC.png) repeat-x;height:35px;color:#058EC8;min-width:75px;text-align:center;}
+.btnR{background:url(../images/btnR.png) no-repeat;}
+.btnMain:hover .btnL{background:url(../images/btnLHover.png) no-repeat;}
+.btnMain:hover .btnC{background:url(../images/btnCHover.png) repeat-x;color:#333;}
+.btnMain:hover .btnR{background:url(../images/btnRHover.png) no-repeat;}
+
+.btnAMain{margin-left:10px;float:left;cursor:pointer;}
+
+.btnAMain li{float:left;list-style:none;}
+.btnAL,.btnAR{height:26px;width:5px;}
+.btnAC{height:26px;min-width:45px;text-align:center;font-size:12px;font-weight:bold;padding: 0px 15px}
+.btnAC a{margin-top:5px;display:inline-block;color:#FFF;}
+.tYellow .btnAC a{color:#000;}
+.dataDiv{
+    width:50%;
+    float:left;
+}
+
+.dataTitle{
+    font-size:16px;
+    font-weight:bold;
+    margin:10px 0px 15px 20px;
+    color:#c51162;
+}
+
+.TitleDesc{font-size:11px;color:#666;font-weight:normal;}
+
+.bottomTitle{
+    font-weight:bold;
+    font-size:11px;
+    color:#1E90FF;
+    text-decoration:underline;
+    float:right;
+    margin-top:5px;
+    cursor:pointer;
+}
+
+.label,.labelmd,.totalChar{
+    color:#666;
+    font-size:12px;
+    text-align:right;
+    padding-right:15px;
+    font-weight:bold;
+}
+		.borderBottom{
+    clear:both;
+    border-bottom:#F0F0F0 solid 1px;
+    margin:5px 15px;
+    height:10px;
+}
+.searchPanel,.tableContainer{
+    clear:both;
+    background-color:#FFFFFF;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #F0F0F0;
+    padding:8px;
+}
+.tableContainer{margin-top:15px;}
+
+.tableContainer .left{padding-right:1%;  width: 49%; float: left;}
+.tableContainer .right{padding-left:1%; width: 49%; float: left;}
+.record .redImg{background-position:25px;padding:0px;}
+.record .greenImg{background-position:25px;padding:0px;}
+.record .yelloImg{background-position:25px;padding:0px;}
+.record .waitAddImg{background-position:25px;padding:0px;}
+.record .waitDeleteImg{background-position:25px;padding:0px;}
+.headerRow td,.rec .headerRow td,.record .headerRow td{
+    height:30px;
+    border-left:#FFF solid 1px;
+    color:#FFF;
+    font-size:12px;
+    font-weight:bold;
+    padding-left:5px;
+    padding-right:5px;
+    background-color:#c51162;
+}
+.record td,.totalTr td,.rec .totalTr td,.rec td,.rec .payRec td,.payRec td,.record .payRec td{
+    height:30px;
+    border-left:#FFF solid 1px;
+    border-bottom:#ccc dotted 1px;
+    color:#000;
+    font-size:12px;
+    padding-left:5px;
+    padding-right:5px;
+}
+.headerRow .first,.record .first{width:22px;}
+.recordEven td{background-color:#FAFAFA;}
+.tdPadding .errorDiv table tr > td,.rec table tr > td,.rec .errorDiv table tr > td,.recordEven .errorDiv table tr > td,.record .errorDiv table tr > td{
+    padding:0px;
+    border:none;
+    height:10px;
+}
+.viewtext{
+    color:#000;
+    font-size:12px;
+}
+
+.viewBold{
+    color:#000;
+    font-size: 15px;
+    font-weight: bold;
+}
+.tdPadding td {
+    padding-bottom: 8px;
+}
+	</style>
+</head>
+<body>
+<div id="LedgerAdd">
+	<div id="ledgercreditors">
+        <div class="dataDiv" id="basicdetails">
+            <div class="dataTitle" >Basic Details</div>
+            <table cellspacing="0" width="100%" class="tdPadding">
+                <tr>
+                    <td class="labelmd" style="width:140px;">Contact  Name</td>
+                    <td><input id="custname" type="text"  style="width:230px;" name="alias" placeholder="Contact Name"/></td>
+                </tr>
+                <tr>
+                    <td class="labelmd" style="width:140px;">Name on invoice</td>
+                    <td><input id="custname" type="text"  style="width:230px;" name="alias" placeholder="Contact Name on invoice"/></td>
+                </tr>
+                <tr>
+                    <td class="label">Contact Nos.</td>
+                    <td><input id="contact" type="text"  style="width:230px;" name="contactnos" placeholder="Contact no"/></td>
+                </tr>
+                <tr>
+                    <td class="label">E-mail</td>
+                    <td><input id="email" type="text"  style="width:230px;" name="email" placeholder="Email"/></td>
+                </tr>
+            </table>
+        </div>
+        
+                        
+        <div class="dataDiv" id="basicdetails">
+            <div class="dataTitle" >Tax Details</div>
+            <table cellspacing="0" width="100%" class="tdPadding">
+                <tr>
+                    <td class="label" style="width:140px;">GST</td>
+                    <td><input id="gst" type="text"  style="width:230px;" name="gst" placeholder="GST"/></td>
+                </tr>
+               	<tr>
+                    <td class="label" style="width:140px;">PAN</td>
+                    <td><input id="pan" type="text"  style="width:230px;" name="pan" placeholder="PAN"/></td>
+                </tr>
+            </table>
+        </div>
+        <div class="borderBottom"></div>
+        <div class="dataDiv" id="addressdetails">
+            <div class="dataTitle" >Address Details</div>
+            <table cellspacing="0" width="100%" class="tdPadding">
+                <tr>
+                    <td class="label" style="width:140px;">Billing Address</td>
+                    <td><input id="regstreet" type="text"  style="width:230px;" name="street"  billing="false" placeholder="Street"/></td>
+                </tr>
+                <tr>
+                    <td class="label"></td>
+                    <td><input id="reglandmark"type="text"  style="width:230px;" name="landmark" billing="false" placeholder="Landmark"/></td>
+                </tr>
+                <tr>
+                    <td class="label"></td>
+                    <td><input id="regsubarea"type="text"  style="width:113px;" name="subarea" billing="false" placeholder="Subarea"/>&nbsp;<input id="area" type="text"  style="width:112px;" name="area" billing="false"  placeholder="Area"/></td>
+                </tr>
+                <tr>
+                    <td class="label"></td>
+                    <td><input id="regcity"type="text"  style="width:112px;"  name="city" billing="false" placeholder="City"/>&nbsp;<input id="regpincode" type="text"  style="width:113px;" name="pincode" billing="false" placeholder="Pincode"/></td>
+                </tr>
+                <tr>
+                    <td class="label"></td>
+                    <td><input id="regstate" type="text"  style="width:112px;" name="state" billing="false" placeholder="State" />&nbsp;<input id="regcountry" type="text"  style="width:113px;" name="country" billing="false" placeholder="Country"/></td>
+                </tr>
+                <tr>
+                    <td class="label" rowspan="2" valign="top" style="padding-top: 6px;">Shipping  Address<br/><a href="javascript:void(0)" id="addbilladdress" class="bottomTitle">As above</a></td>
+                    <td><input id="billstreet" type="text"  style="width:230px;" name="street" billing="true" placeholder="Street"/></td>
+                </tr>
+                 <tr>
+                    <td><input id="billlandmark" type="text"  style="width:230px;" name="landmark" billing="true" placeholder="Landmark"/></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input id="billsubarea" type="text"  style="width:113px;" name="subarea" billing="true" placeholder="Subarea"/>&nbsp;<input id="billarea" type="text"  style="width:112px;" name="area" billing="true" placeholder="Area"/></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input id="billcity" type="text"  style="width:112px;" name="city" billing="true"   placeholder="City"/>&nbsp;<input id="billpincode" type="text"  style="width:113px;" name="pincode" billing="true" placeholder="Pincode"/></td>
+                </tr>
+               
+                <tr>
+                    <td></td>
+                    <td><input id="billstate" type="text"  style="width:112px;" name="state" billing="true" placeholder="State"/>&nbsp;<input id="billcountry" type="text"  style="width:113px;" name="country" billing="true" placeholder="Country"/></td>
+                </tr>
+            </table>
+        </div>
+        <div class="dataDiv" id="basicdetails">
+            <div class="dataTitle" >Opening Balance</div>
+            <table cellspacing="0" width="100%" class="tdPadding">
+                <tr>
+                    <td class="label" style="width:140px;">Amount</td>
+                    <td><input id="gst" type="text"  style="width:230px;" name="gst" placeholder="Amount" value="0.00" /></td>
+                </tr>
+               	<tr>
+                    <td class="label" style="width:140px;">type</td>
+  					<td style="font-size:14px;"><input style="width:20px;" type="radio" name="cont_is" value="payable" checked> Payable<input type="radio" style="width:20px;" name="cont_is" value="receivable">Receivable</td>
+                </tr>
+            </table>
+        </div>
+        <div class="dataDiv" id="basicdetails">
+            <div class="dataTitle">Other</div>
+            <table cellspacing="0" width="100%" class="tdPadding">
+                <tr>
+                    <td class="label" style="width:140px;">Currency</td>
+                    <td><input id="gst" type="text"  style="width:230px;" name="gst" placeholder="Currency" value="Rupees"/></td>
+                </tr>
+               	<tr>
+                    <td class="label" style="width:140px;">Due in Days</td>
+  					<td><input type="text" style="width:230px;" name="due_days" value="0"></td>
+                </tr>
+                <tr>
+                    <td class="label" style="width:140px;vertical-align: top;">Notes</td>
+  					<td><textarea style="width:230px;height:125px;"></textarea></td>
+                </tr>
+            </table>
+        </div>
+    <div style="clear:both;"></div>
+    <div class="layout horizontal-reverse flex">
+		<button class="buttonAction">Cancel</button>
+		<button class="buttonAction" id="addNewContactBtn">Save</button>
+	</div>"
+</div>
+</div>
+<script type="text/javascript">
+$("input").add("textarea").addClass("input_text");
+</script>
+</body>
+</html>
